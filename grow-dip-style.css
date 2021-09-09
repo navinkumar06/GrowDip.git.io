@@ -1,0 +1,951 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+}
+
+html{
+	scroll-behavior: smooth;
+}
+/*****    marquee    behaviour    ****/
+
+marquee p{
+	color: mediumvioletred;
+	font-size: 24px;
+	font-weight: 500;
+	transition: all 0.3s ease;
+}
+
+  /*    navbar        */
+
+
+
+
+  .navbar{
+  	position: fixed;
+  	width: 100%;
+  	z-index: 999;
+  	padding: 30px 0;
+  	/*background-color: crimson 	;  */ 
+  	font-family: 'Ubuntu' , sans-serif;
+  	transition: all 0.3s ease;
+
+  }
+
+ .navbar.sticky{
+ 	padding: 13px 0;
+  	background-color: white 	;
+
+ }
+  .navbar .max-width{
+
+  	display: flex;
+  	align-items: center;
+  	  	justify-content: space-between;
+  }
+
+  .max-width{
+      max-width: 1300px;
+      padding: 0 80px;
+      margin: auto;
+  }
+
+.navbar .logo img{
+   height: 50px;
+   width: 178px;
+
+}
+.navbar.sticky .logo img{
+
+   height: 30px;
+   width: 100px;
+
+}
+.navbar .site-logo a{
+	color: mediumvioletred;
+	text-decoration: none;
+	font-weight: 800;
+	font-size: 22px;
+}
+
+.navbar.sticky .site-logo a{
+color: mediumvioletred;
+	text-decoration: none;
+	font-weight: 700;
+	font-size: 20px;
+}
+
+.navbar .site-logo a span{
+	font-weight: 600;
+
+	font-size: 10px;
+}
+.navbar.sticky .site-logo a span{
+	font-weight: 600;
+	font-size: 8px;
+	color: gray;
+}
+
+
+.navbar.sticky .logo a span {
+	color: #7FDDED;
+	}
+.navbar.sticky .logo a  {
+	color: #7FDDED;
+}
+
+
+.navbar .menu li{
+	list-style: none;
+	display: inline-block;
+}
+
+.navbar .menu li a {
+    
+    color: mediumvioletred;
+    font-size: 20px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: o.4s ease;
+
+ }
+
+.navbar .menu li a:hover{
+	color: mediumvioletred; 
+	
+}
+.navbar.sticky .menu li a:hover{
+	color: #7FDDED;
+}
+
+
+
+
+/*  MENU   BUTTON  STYLING  */
+
+.menu-btn{
+	color: mediumvioletred;
+	font-size: 23px;
+	cursor: pointer;
+	display: none;
+}
+
+
+.scroll-up-btn{
+	position:fixed ;
+	height: 45px;
+	width: 42px;
+	background: mediumvioletred;
+	right: 30px;
+	bottom: 10px;
+	text-align: center;
+	line-height: 45px;
+	color: #fff;
+	z-index: 9999;
+	font-size: 30px;
+	border-radius: 6px;
+	cursor: pointer;
+	opacity: 0;
+   pointer-events:none ;
+   transition: all 0.3s ease;
+}
+
+
+.scroll-up-btn.show{
+	opacity: 1; 
+   pointer-events:auto ;
+   bottom: 30px;
+
+}
+
+
+/*   HOME   SECTION   STYLING    */
+
+
+
+
+
+.home{
+	display: flex;
+	background: url(background17.jpg) no-repeat center  ;
+
+	height: 100vh;
+	background-size: cover;
+	min-height: 500;
+	color: white;
+	
+	font-family: 'Ubuntu' , sans-serif;
+
+
+	animation: slider 35s infinite linear;
+}
+
+
+
+
+
+
+.home .max-width{
+ margin: auto 0 auto 40px;	
+}
+
+
+.home .home-content .text-1{
+   font-size: 27px;
+}
+
+
+.home .home-content .text-2{
+font-size: 40px;
+color: mediumvioletred;
+font-weight: 600;
+ margin-left: -3px;
+}
+.home .home-content .text-2 span{
+font-size: 60px;
+position: relative;
+background: none;
+transform: translate(-50%, -50%);
+font-weight: 600;
+ margin-left: 0px;
+}
+
+.home .home-content .text-2 span:nth-child(1) {
+
+color: white;
+
+
+}
+
+
+
+.home .home-content .text-2 span:nth-child(2) {
+color: mediumvioletred;
+animation: animate 2s ease-in-out infinite;
+
+}
+
+@keyframes animate{
+	0% , 100%{
+		color: white;
+		clip-path: polygon(0% 10% , 15% 30%,32% 50% , 54% 60%, 70% 61%, 84% 59%, 100% 52%, 100% 100% , 0% 100%);
+	}
+	50%{
+color: mediumvioletred;
+		clip-path: inset(0% 0% 0% 0%);
+	}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.home .home-content .text-3{
+  font-size: 35px;
+  margin: 6px 0;
+}
+
+.home .home-content .text-3 span {
+	color: #76E3F6;
+	font-weight: 600;
+}
+
+.home .home-content a{
+	display: inline-block;
+	background: mediumvioletred;
+	color: #fff;
+	padding: 8px 18px;
+	font-size: 22px ;
+	border-radius: 10px;
+	margin-top: 15px;
+	font-weight: bold;
+	border: 2px solid mediumvioletred  ;
+    transition: all 0.3s ease;
+}
+
+.home .home-content a:hover{
+ color: mediumvioletred ; 
+ background: none;
+}
+
+/*********  ALL SIMLIAR   CONTENT STYLing     CODES  ***/
+
+
+.about, .certificates , .skills , .projects , .contact , footer{
+	font-family: 'Poppins', sans-serif;
+}
+
+.about .about-content , 
+.certificates .certificates-content , 
+.skills .skills-content ,
+.contact  .contact-content {
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+    justify-content: space-between;
+}
+
+section{
+	padding: 100px 0;
+}
+
+section .title{
+	position: relative;
+	text-align: center;
+	font-size: 35px;
+	font-weight: 500;
+	margin-bottom: 60px;
+	padding-bottom: 20px;
+	font-family: 'Ubuntu' , sans-serif;
+}
+section .title::before{
+	content: "";
+	position: absolute;
+	width: 200px;
+	height: 3px;
+	bottom: 0px;
+	left: 50%;
+	background: #111;
+	transform: translate(-50% );
+
+}
+
+section .title::after{
+	position: absolute;
+	bottom: -12px;
+	left: 50%;
+	font-size: 20px;
+	color: mediumvioletred;
+  padding:5px ;
+	background: #fff;
+	transform: translate(-50% );
+
+}
+
+
+
+
+
+/*            about   section    styling                        */
+
+.about .title::before {
+	background: #222;	
+	width:200px;
+	height: 3px;
+	border-radius: 2px;
+	
+}
+.about .title::after{
+	background-color: #fff;
+	content: "who i am";
+}
+
+.about:hover .title::before {
+	background: #fff;	
+	width:200px;
+	height: 3px;
+	border-radius: 2px;
+	
+}
+
+
+
+.about:hover .title::after{
+	background-color: #222;
+	content: "who i am";
+}
+
+
+
+.about:hover{
+	background-color: #222;
+	border-radius: 10px;
+  color: white;
+}
+
+.about .about-content .column-left img{
+	height: 400px;
+	width: 400px ;
+	object-fit: cover;
+	border-radius: 14px;
+	
+}
+.about .about-content .column-left:hover img{
+	transform: scale(1.09);   
+
+}
+.about .about-content .column-right:hover{
+	transform: scale(1.05);   
+
+}
+
+.about .about-content .column-left{
+    width: 45%;
+}
+
+.about .about-content .column-right{
+    width: 55%;
+}
+
+.about .about-content .column-right .text{
+	font-size: 25px;
+	font-weight: 600;
+	margin-bottom: 10px;
+
+}
+
+.about .about-content .column-right .text span {
+	color: mediumvioletred;
+}
+
+.about .about-content .column-right p span{
+	color: mediumvioletred;
+	font-weight: 500;
+}
+
+
+.about .about-content .column-right p{
+	text-align: justify;
+}
+
+.about .about-content .column-right a{	
+	display: inline-block;
+	background: mediumvioletred;
+	color: whitesmoke;
+	padding: 10px 30px;
+	font-size: 20px ;
+	border-radius: 10px;
+	margin-top: 15px;
+	font-weight: 500;
+	border: 2px solid mediumvioletred  ;
+    transition: all 0.3s ease;
+}
+
+
+.about .about-content .column-right a:hover{
+	color: mediumvioletred;
+	background: none;
+}
+
+
+
+
+
+
+
+
+
+
+  
+/**********  diploma learning materials   designing   starts  here        *****************/
+
+
+
+.projects .title{
+	font-size: 35px;
+}
+
+
+.projects .title::before {
+	background: #222;	
+	width: 400px;
+	height: 3px;
+	
+}
+.projects .title::after{
+
+	font-size: 14px;
+	content: "things you should learn";
+}
+.projects .typing4{
+	text-align: center;
+	font-weight: 600;
+	color: mediumvioletred ;
+}
+ .projects .carousel .card {
+ 	background: #222;
+ 	border-radius: 6px ;
+ 	padding: 25px 35px;
+ 	text-align: center;
+ 	transition: all 0.3s ease ;
+ }
+ .projects .carousel .card:hover {
+ 	background: mediumvioletred;
+ }
+  .projects .carousel .card .box{
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+	transition: all 0.3s ease ;
+  }
+
+  .projects .carousel .card:hover .box {
+  	transform: scale(1.05);
+  	 
+  }
+
+   .projects .carousel .card .text {
+   	font-size: 25px;
+   	font-weight: 500;
+   	margin: 10px 0 7px 0 ;
+   	text-decoration: none;
+   	color: mediumvioletred;
+   }
+
+    .projects .carousel .card:hover .text {
+ 	background: mediumvioletred;
+ 	color: white;
+ 	font-size: 29px;
+
+ }
+
+    .projects .carousel .card p{
+    	text-decoration: none;
+   	color: white;
+    }
+        .projects .carousel .card:hover p{
+    	text-decoration: none;
+   	color: #222;
+    }
+
+
+.projects .carousel .card img{
+	height: 150px;
+	width: 150px;
+	border-radius: 55%;
+	object-fit: fill;
+	border: 4px solid mediumvioletred ;
+	 	transition: all 0.3s ease ;
+}
+ .projects .carousel .card:hover img{
+ 	border-color:#fff ;
+ }
+
+
+.owl-dots{
+	text-align: center;
+	margin-top: 20px;
+}
+.owl-dot{ 
+	height: 13px;
+	width: 13px;
+	margin: 0 5px;
+	outline: none!important;
+	border-radius: 50%;
+	border: 3px solid mediumvioletred!important;
+	transition: all 0.3s ease ;
+
+}
+.owl-dot.active{
+	width: 35px;
+	border-radius: 14px;
+}
+
+.owl-dot.active,
+.owl-dot:hover{
+	background: mediumvioletred!important;
+
+}
+
+
+
+
+
+/*********   CONTACT    SECTION   STYLING  ***************/
+
+
+.contact .title::before {
+	background: #222;	
+	width: 200px;
+	height: 3px;
+	
+}
+.contact .title:after{
+	content: "get in touch";
+}
+.contact .contact-content .column{
+	width: calc( 50% - 30px );
+}
+
+.contact .contact-content .text{
+font-size: 25px;
+font-weight: 600;
+margin-bottom: 10px;
+}
+
+.contact .contact-content .column-left p{
+	text-align: justify;
+
+}
+
+.contact .contact-content .column-left .icons{
+	margin: 10px 0;
+	
+}
+.contact .contact-content .column-left .row{
+	display: flex;
+	height: 70px;
+	text-decoration: none;
+	text-decoration-color: mediumvioletred;
+	align-items: center;
+}
+
+
+.contact .contact-content .row i{
+	margin-top: 20px;
+	font-size: 25px;
+	color: mediumvioletred;
+}
+.contact .contact-content .info .head{ 
+	text-decoration: none;
+	color: #222;
+	font-weight: 500;
+}
+.contact .contact-content .info .sub-title{
+	font-weight: 500;
+
+	color: #666;
+}
+ 
+.contact .contact-content  .row .info{
+	margin-left: 30px;
+	
+}
+
+
+  
+.contact  .column-right form .fields{
+	display: flex;
+}
+
+.contact  .column-right form .field,
+.contact  .column-right form .fields .field{
+	height: 45px;
+	width: 100%;
+	margin-bottom:15px ;
+}
+.contact  .column-right form .textarea{
+	height:80px;
+width: 100%;
+}
+
+.contact  .column-right form .name{
+	margin-right: 10px;
+}
+.contact  .column-right form .email{
+	margin-left: 10px;
+} 
+.contact  .column-right form .field input , 
+.contact  .column-right form .textarea textarea{
+	height: 100%;
+	width: 100%;
+	border: 1px solid mediumvioletred ;
+	border-radius: 6px;
+	outline: none;
+	padding: 0 15px;
+	font-size: 17px;
+	font-family: 'Poppins' ,'sans-serif;' ;
+}
+
+
+.contact  .column-right form .textarea textarea{
+	padding-top: 10px;
+	resize: none;
+}
+.contact  .column-right form .button{
+	height: 47px;
+	width: 170px;
+}
+
+.contact  .column-right form .button button{
+	width: 100%;
+	height: 100%;
+	border: 2px solid mediumvioletred;
+	background: mediumvioletred;
+	font-size: 20px;
+	color: #fff;
+	font-weight: 500;
+	border-radius: 8px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+.contact  .column-right form .button button:hover{
+	color: mediumvioletred;
+	background: none;
+
+}
+
+
+
+/*****  footer    styling     **********/
+
+
+footer{
+	text-align: center;
+	background: #111;
+	padding: 20px 23px ;
+	color: #fff;
+}
+footer span a{
+	color: mediumvioletred;
+}
+footer span a:hover{
+	
+	text-decoration: none;
+	color:  #57C3C8;
+	
+}
+
+footer .logo-img img{
+height: 35px;
+width: 35px;
+border-radius: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*               RESPONSIVE   MEDIA  QUERY             */
+
+
+
+@media(max-width: 1272px){
+ .home .max-width{
+ 	margin-left: 0px;
+ }
+
+}
+
+
+@media(max-width: 1104px){
+    .about .about-content .column-left img{
+          height: 350px;
+          width: 350px;
+    	
+    }
+
+}
+
+
+@media(max-width: 991px){
+.max-width{
+	padding:0 50px ;
+}
+}
+
+@media(max-width: 947px){
+
+	 
+
+	 .menu-btn{
+	 	display: block;
+	 	z-index: 999;
+
+	 }
+
+	 .menu-btn i.active:before{
+	 	content:"\f00d";
+	 }
+     
+   .navbar .menu {
+   	position: fixed;
+   	height: 100vh;
+   	width: 100%;
+   	left: 0;
+   	left: -100%;
+   	top: 0;
+   	background: #111;
+   	text-align: center;
+   	padding-top: 80px;
+   	transition: all 0.3s ease ;
+   } 
+    .navbar .menu.active{
+    	left: 0 ;
+    }
+
+   .navbar .menu li{
+   	display: block  ;
+   	
+   }
+
+   .navbar .menu li a{
+   	display: inline-block;
+   	margin: 20px 0;
+   	font-size: 25px;
+   }
+.home .home-content .text-1{
+font-size: 20px;
+
+}
+
+.home .home-content .text-2{
+font-size: 50px;
+
+}
+
+.home .home-content .text-3{
+  font-size: 35px;
+ 
+}
+
+.home .home-content a{
+font-size: 23px;
+padding: 10px 30px;	
+}
+
+.max-width{
+	width: 750px;
+}
+
+.about .about-content .column{
+	width: 100%;
+}
+.about .about-content .column-left{
+	display: flex;
+	justify-content: center;
+	margin: 0  auto 60px;
+}
+
+.about .about-content .column-right{
+	flex: 100%;
+	
+}
+
+.certificates .certificates-content .card{
+	width: calc( 50% - 10px );
+	margin-bottom: 20px;
+}
+
+.skills .skills-content .column,
+.contact .contact-content .column{
+	width: 100%;
+	margin-bottom: 35px;
+	
+
+}
+
+
+footer{
+	text-align: center;
+	background: #111;
+	font-size: 16px;
+	padding: 20px 23px ;
+	color: #fff;
+}
+footer span a{
+	color: mediumvioletred;
+}
+footer span a:hover{
+	
+	text-decoration: none;
+	color:  #57C3C8;
+	
+}
+.projects .title{
+	font-size: 30px;
+}
+
+.home .home-content .text-3{
+  font-size: 30px;
+  margin: 5px 0;
+}
+
+
+
+
+}
+
+
+
+
+@media(max-width: 690px){
+	.max-width{
+	width: 480px;
+}
+
+	.max-width{
+		padding: 0 25px;
+	}
+	.home .home-content .text-1{
+font-size: 17px;
+
+}
+
+.home .home-content .text-2{
+font-size: 40px;
+
+}
+
+.home .home-content .text-3{
+  font-size: 25px;
+ 
+}
+
+.home .home-content a{
+font-size: 20px;
+padding: 9px 25px;	
+}
+
+
+.certificates .certificates-content .card {
+	width: 100%;
+	
+}
+.projects .typing4{
+	text-align: center;
+	font-size: 15px;
+	font-weight: 600;
+	color: mediumvioletred ;
+}
+.projects .title::before {
+	background: #222;	
+	width: 280px;
+	height: 3px;
+	
+}
+.projects .title::after{
+
+	font-size: 12px;
+	content: "things you should learn";
+}
+
+.projects .title{
+	font-size: 22px;
+}
+marquee p{
+	color: mediumvioletred;
+	font-size: 17px;
+	font-weight: 500;
+	transition: all 0.3s ease;
+}
+
+
+.home .home-content .text-3{
+  font-size: 23px;
+  margin: 6px 0;
+}
+
+
+}
